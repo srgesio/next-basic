@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-
+import Link from 'next/link'
 
 export default function Params() {
   const {name, id} = useRouter().query
@@ -8,6 +8,9 @@ export default function Params() {
       <h1>
         Rotas Params: {name} e {id}
       </h1>
+      <Link href='/routings' passHref>
+        <button>Voltar</button>
+      </Link>
     </div>
   )
 }
